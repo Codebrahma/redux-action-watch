@@ -1,0 +1,57 @@
+{
+  "name": "redux-action-watch",
+  "version": "1.0.0",
+  "description": "Watch actions dispatched to redux.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "test": "cross-env BABEL_ENV=commonjs mocha --compilers js:babel-register --recursive",
+    "test:watch": "npm test -- --watch",
+    "cover": "cross-env BABEL_ENV=commonjs istanbul cover _mocha -- --compilers js:babel-register --recursive",
+    "lint": "eslint src test",
+    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdivyansh/redux-action-watch.git"
+  },
+  "keywords": [
+    "redux-action-watch",
+    "action",
+    "redux-watch",
+    "redux-action",
+    "action-watcher"
+  ],
+  "author": "Divyansh Kumar mr.divyanshindore@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrdivyansh/redux-action-watch/issues"
+  },
+  "homepage": "https://github.com/mrdivyansh/redux-action-watch#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-2": "^6.13.0",
+    "chai": "^3.5.0",
+    "cross-env": "^3.0.0",
+    "eslint": "^3.6.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "istanbul": "^1.0.0-alpha",
+    "mocha": "^3.0.2",
+    "rimraf": "^2.5.4",
+    "sinon": "^1.17.6"
+  },
+  "dependencies": {
+    "lodash.defer": "^4.1.0",
+    "lodash.foreach": "^4.5.0"
+  }
+}
