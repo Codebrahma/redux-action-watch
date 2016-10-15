@@ -60,7 +60,7 @@ export const onAction = dispatch => (action, listener) => subscribeActions(dispa
  * @param      {Function}  dispatch  Redux dispatch function
  * @return     {Function}  Action creator to dispatch subcribe action object to redux
  */
-export const onActionOnce = dispatch => (action, listener) => {
+export const onActionOnce = dispatch => (actionType, listener) => {
   let unsubscribe = null;
   const wrapListener = (actionMeta) => {
     if (unsubscribe) {
@@ -69,7 +69,7 @@ export const onActionOnce = dispatch => (action, listener) => {
     }
     listener(actionMeta);
   };
-  unsubscribe = subscribeActions(dispatch)({ [action]: wrapListener });
+  unsubscribe = subscribeActions(dispatch)({ [actionType]: wrapListener });
   // return unsubscribe fn to support termination without any call.
   return unsubscribe;
 };
