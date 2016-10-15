@@ -9,7 +9,7 @@
   - Provides some helpers to register you own function as watcher like, `onAction`, `onActionOnce`, `subscribeActions`.
   - It can act as IPC (inter-process communication) b/w components.
 
-> I don't think, we should only dispatch action to make changes in flux/redux state. Action can eighter change state or acknowledge that something happend. 
+> I don't think, we should only dispatch action to make changes in flux/redux state. Action can either change state or acknowledge that something happen. 
 
 
 ### Installation
@@ -26,8 +26,8 @@ app.js / index.js
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk'; // optional
 import reducers from './reducers';
-import actionWatchMiddlewaregenerator from 'redux-action-watch/lib/middleware;
-import actionWatchReducer from 'redux-action-watch/lib/reducer;
+import actionWatchMiddlewaregenerator from 'redux-action-watch/lib/middleware';
+import actionWatchReducer from 'redux-action-watch/lib/reducer';
 // import { middleware, reducer } from 'redux-action-watch';
 
 const initialState = {};
@@ -112,7 +112,7 @@ class LoginForm extends React.Component {
 - `subscribeAction(listenersObj)`  
 It can register watcher for more than one actions.  
 **Argument**  
-`listenersObj`: It should be an object where keys will be action `type` and value will be listner or array of listners. Example: `{ ACTION_A: func1, ACTION_B: [func2, func3] }`.
+`listenersObj`: It should be an object where keys will be action `type` and value will be listener or array of listeners. Example: `{ ACTION_A: func1, ACTION_B: [func2, func3] }`.  
 **Returns**  
 `unsubscribeFunc`: It returns function. Which should invoke to unsubscribe those listeners.
 
@@ -122,18 +122,18 @@ It can un-subscribe actions which subscribe by `subscribeAction` function. It ta
 `listenersObj`: Same as above.
 
 - `onAction`  
-It can register a watcher/listener for a action.
+It can register a watcher/listener for a action.  
 **Arguments**  
 `actionType`: Type/name of action. Example, `const action = { type: ACTION_A }`. Here `ACTION_A` is actionType.  
-`listner`: Function which will be invoke on action dispatch.  
+`listener`: Function which will be invoke on action dispatch.  
 **Returns**  
 `unsubscribeFunc`: It returns function. Which should invoke to unsubscribe that listener.  
 
 - `onActionOnce`  
-It can register a watcher/listener for a action. And it will automatically un-subscribe after once invoke.
+It can register a watcher/listener for a action. And it will automatically un-subscribe after once invoke.  
 **Arguments**  
 `actionType`: Type/name of action. Example, `const action = { type: ACTION_A }`. Here `ACTION_A` is actionType.  
-`listner`: Function which will be invoke on action dispatch.  
+`listener`: Function which will be invoke on action dispatch.  
 **Returns**  
 `unsubscribeFunc`: It returns function. You can unsubscribe without once invoke.
 
