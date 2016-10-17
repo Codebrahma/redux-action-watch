@@ -108,20 +108,21 @@ class LoginForm extends React.Component {
 ```
 
 ### Documentation
+Note:- All functions should first call with `dispatch`
 
-- `subscribeAction(listenersObj)`  
+- `subscribeAction(dispatch)(listenersObj)`  
 It can register watcher for more than one actions.  
 **Argument**  
 `listenersObj`: It should be an object where keys will be action `type` and value will be listener or array of listeners. Example: `{ ACTION_A: func1, ACTION_B: [func2, func3] }`.  
 **Returns**  
 `unsubscribeFunc`: It returns function. Which should invoke to unsubscribe those listeners.
 
-- `unsubscribeAction(listenersObj)`  
+- `unsubscribeAction(dispatch)(listenersObj)`  
 It can un-subscribe actions which subscribe by `subscribeAction` function. It takes same `listenersObj` used at time of subscription.  
 **Argument**  
 `listenersObj`: Same as above.
 
-- `onAction`  
+- `onAction(dispatch)(actionType, listener)`  
 It can register a watcher/listener for a action.  
 **Arguments**  
 `actionType`: Type/name of action. Example, `const action = { type: ACTION_A }`. Here `ACTION_A` is actionType.  
@@ -129,7 +130,7 @@ It can register a watcher/listener for a action.
 **Returns**  
 `unsubscribeFunc`: It returns function. Which should invoke to unsubscribe that listener.  
 
-- `onActionOnce`  
+- `onActionOnce(dispatch)(actionType, listener)`  
 It can register a watcher/listener for a action. And it will automatically un-subscribe after once invoke.  
 **Arguments**  
 `actionType`: Type/name of action. Example, `const action = { type: ACTION_A }`. Here `ACTION_A` is actionType.  
@@ -154,4 +155,3 @@ License
 ----
 
 MIT
-
