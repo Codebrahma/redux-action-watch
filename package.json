@@ -21,11 +21,13 @@
     "url": "git+https://github.com/mrdivyansh/redux-action-watch.git"
   },
   "keywords": [
-    "redux-action-watch",
+    "redux action watch",
     "action",
-    "redux-watch",
-    "redux-action",
-    "action-watcher"
+    "redux watch",
+    "redux action",
+    "action watcher",
+    "redux",
+    "react"
   ],
   "author": "Divyansh Kumar mr.divyanshindore@gmail.com",
   "license": "MIT",
