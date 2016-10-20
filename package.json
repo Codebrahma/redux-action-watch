@@ -1,6 +1,6 @@
 {
   "name": "redux-action-watch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Watch actions dispatched to redux.",
   "main": "./lib/index.js",
   "scripts": {
