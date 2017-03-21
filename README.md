@@ -1,7 +1,7 @@
 # redux-action-watch
 
-[![Build Status](https://travis-ci.org/mrdivyansh/redux-action-watch.svg?branch=master)](https://travis-ci.org/mrdivyansh/redux-action-watch)
-[![Coverage Status](https://coveralls.io/repos/github/mrdivyansh/redux-action-watch/badge.svg?branch=master)](https://coveralls.io/github/mrdivyansh/redux-action-watch?branch=master)
+[![Build Status](https://travis-ci.org/Codebrahma/redux-action-watch.svg?branch=master)](https://travis-ci.org/Codebrahma/redux-action-watch)
+[![Coverage Status](https://coveralls.io/repos/github/Codebrahma/redux-action-watch/badge.svg?branch=master)](https://coveralls.io/github/Codebrahma/redux-action-watch?branch=master)
 
 **`redux-action-watch` provides feature to listen action dispatched to redux.**
 
