@@ -1,6 +1,6 @@
 {
   "name": "redux-action-watch",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Watch actions dispatched to redux.",
   "main": "./lib/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrdivyansh/redux-action-watch.git"
+    "url": "git+https://github.com/Codebrahma/redux-action-watch.git"
   },
   "keywords": [
     "redux action watch",
@@ -32,9 +32,9 @@
   "author": "Divyansh Kumar mr.divyanshindore@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrdivyansh/redux-action-watch/issues"
+    "url": "https://github.com/Codebrahma/redux-action-watch/issues"
   },
-  "homepage": "https://github.com/mrdivyansh/redux-action-watch#readme",
+  "homepage": "https://github.com/Codebrahma/redux-action-watch#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.14.0",
