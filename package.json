@@ -57,6 +57,7 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
     "lodash.defer": "^4.1.0",
     "lodash.foreach": "^4.5.0"
   },

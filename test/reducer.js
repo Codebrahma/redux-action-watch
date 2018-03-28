@@ -62,4 +62,30 @@ describe('Checking reducer.', () => {
 
     expect(newState).to.deep.equal(resultState);
   });
+
+  it('should test reducer behaviour, applies immutable state changes', () => {
+    const currentState = {
+      ACTION_A: [listenerA, listenerA1, listenerA2],
+      ACTION_B: [listenerB],
+      ACTION_C: [listenerC],
+    };
+    const resultState = {
+      ACTION_A: [listenerA, listenerA1],
+      ACTION_B: [listenerB],
+      ACTION_C: [listenerC],
+    };
+    const expectedCurrentArrayLength = currentState.ACTION_A.length;
+    const expectedResultArrayLength = expectedCurrentArrayLength - 1;
+
+    const newState = reducer(currentState, {
+      type: UNSUBSCRIBE_ACTIONS,
+      listenersObj: {
+        ACTION_A: [listenerA2],
+      },
+    });
+
+    expect(newState).to.deep.equal(resultState);
+    expect(currentState.ACTION_A.length).to.equal(expectedCurrentArrayLength);
+    expect(newState.ACTION_A.length).to.equal(expectedResultArrayLength);
+  });
 });
