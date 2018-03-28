@@ -1,4 +1,5 @@
 import forEach from 'lodash.foreach';
+import cloneDeep from 'lodash.clonedeep';
 import { actionNamespace, SUBSCRIBE_ACTIONS, UNSUBSCRIBE_ACTIONS } from './actionCreators';
 
 // helper function to convert listners object to acceptable object
@@ -16,7 +17,7 @@ export default (state = {}, { type, listenersObj }) => {
   }
 
   // clone the state
-  const newState = Object.assign({}, state);
+  const newState = cloneDeep(state);
   // parse the listenersObj
   const formattedListenerObj = formatListenerObj(listenersObj);
   // Check for subcribe or un-subscribe action
